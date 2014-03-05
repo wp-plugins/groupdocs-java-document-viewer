@@ -90,4 +90,3 @@ If you still have questions, please feel free to <a href="http://groupdocs.com/c
 
 = 1.0 =
 * Initial release.
-
