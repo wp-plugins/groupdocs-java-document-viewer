@@ -87,7 +87,9 @@ For detailed installation and usage instructions, please see <a href="put link h
 If you still have questions, please feel free to <a href="http://groupdocs.com/corporate/contact" rel="nofollow" target="_blank">contact us</a>!
 
 == Changelog ==
+= 1.0.1 =
+* Updated plugin to version 1.8.0 for GroupDocs.Viewer for Java
+* Added new field 'Folder Path'
 
-= 1.0 =
+= 1.0.0 =
 * Initial release.
-

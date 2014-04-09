@@ -1,12 +1,12 @@
 <?php
 
 /*
-Plugin Name: GroupDocs Java Viewer
+Plugin Name: GroupDocs.Viewer for Java | HTML5 Document Viewer
 Plugin URI: http://www.groupdocs.com/
-Description: Lets you embed PPT, PPTX, XLS, XLSX, DOC, DOCX, PDF and many other formats from your GroupDocs acount in a web page using the GroupDocs Embedded Viewer (no Flash or PDF browser plug-ins required).
+Description: With this plugin you can seamlessly integrate <a href="http://groupdocs.com/java/document-viewer-library" target="_blank">GroupDocs' Java document viewer functionality</a> into your WordPress website. This will allow you to embed and display PDF, Microsoft Office and over 45 other type of documents right on your WordPress website.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.0.0
+Version: 1.0.1
 License: GPLv2
 */
 
@@ -20,7 +20,8 @@ extract(shortcode_atts(array(
     'url' => '',
     'width' => '',
     'height' => '',
-    'file_path' => ''
+    'file_path' => '',
+    'folder_path' => '',
 ), $atts));
     $url = trim(strip_tags($url));
     //Add backslash to end of the URL
@@ -29,34 +30,71 @@ extract(shortcode_atts(array(
     }
 
     return  '
-    <script type="text/javascript" src="' . $url . 'assets/js/libs/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="' . $url . 'assets/js/libs/jquery-ui-1.10.3.min.js"></script>
-    <script type="text/javascript" src="' . $url . 'assets/js/libs/knockout-2.2.1.js"></script>
-    <script type="text/javascript" src="' . $url . 'assets/js/libs/turn.min.js"></script>
-    <script type="text/javascript" src="' . $url . 'assets/js/libs/modernizr.2.6.2.Transform2d.min.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=libs/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=libs/jquery-ui-1.10.3.min.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=libs/knockout-2.2.1.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=libs/turn.min.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=libs/modernizr.2.6.2.Transform2d.min.js"></script>
     <script type="text/javascript">
         if (!window.Modernizr.csstransforms){
-            var scriptLoad = document.createElement(\'script\');
-            scriptLoad.setAttribute("type","text/javascript");
-            scriptLoad.setAttribute("src", \'' . $url . 'assets/js/libs/turn.html4.min.js\');
-            document.getElementsByTagName("head")[0].appendChild(scriptLoad);
-        }
+                var scriptLoad = document.createElement("script");
+                scriptLoad.setAttribute("type","text/javascript");
+                scriptLoad.setAttribute("src", "' . $url . 'GetJsHandler?script=libs/turn.html4.min.js");
+                document.getElementsByTagName("head")[0].appendChild(scriptLoad);
+            }
     </script>
-    <script type="text/javascript" src="' . $url . 'assets/js/installableViewer.min.js"></script>
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=installableViewer.min.js"></script>
     <script type="text/javascript">$.ui.groupdocsViewer.prototype.applicationPath = \'' . $url . '\';</script>
     <script type="text/javascript">$.ui.groupdocsViewer.prototype.useHttpHandlers = true ;</script>
-    <script type="text/javascript" src="' . $url . 'assets/js/GroupdocsViewer.all.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="' . $url . 'assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="' . $url . 'assets/css/GroupdocsViewer.all.min.css">
-    <link rel="stylesheet" type="text/css" href="' . $url . 'assets/css/jquery-ui-1.10.3.dialog.min.css">
+    <script type="text/javascript" src="' . $url . 'GetJsHandler?script=GroupdocsViewer.all.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="' . $url . 'GetCssHandler?script=bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="' . $url . 'GetCssHandler?script=GroupdocsViewer.all.min.css">
+    <link rel="stylesheet" type="text/css" href="' . $url . 'GetCssHandler?script=jquery-ui-1.10.3.dialog.min.css">
     <script>
         $(function() {
             var localizedStrings = null;
             var thumbsImageBase64Encoded = null;
-            $(\'#test\').groupdocsViewer({ filePath: \''. $file_path .'\', docViewerId: \'doc_viewer1\', quality: 100, showHeader: true, showThumbnails: true, openThumbnails: true, initialZoom: 100,
-                zoomToFitWidth: true, zoomToFitHeight: false, backgroundColor: \'\', showFolderBrowser: true, showPrint: true, showDownload: true, showZoom: true, showPaging: true,
-                showViewerStyleControl: true, showSearch: true, preloadPagesCount: 0, viewerStyle: 1, supportTextSelection: true, localizedStrings: localizedStrings,
-                thumbsImageBase64Encoded: thumbsImageBase64Encoded, showDownloadErrorsInPopup: true });
+            $(\'#test\').groupdocsViewer({ filePath: \'' . base64_encode($folder_path . $file_path) . '\',
+                                           docViewerId: \'doc_viewer1\',
+                                           quality: 100,
+                                           showThumbnails: true,
+                                           openThumbnails: true,
+                                           initialZoom: 100,
+                                           zoomToFitWidth: true,
+                                           zoomToFitHeight: false,
+                                           width: 1000,
+                                           height: 500,
+                                           backgroundColor: \'\',
+                                           showFolderBrowser: true,
+                                           showPrint: true,
+                                           showDownload: true,
+                                           showZoom: true,
+                                           showPaging: true,
+                                           showViewerStyleControl: true,
+                                           showSearch: true,
+                                           preloadPagesCount: 0,
+                                           viewerStyle: 1,
+                                           supportTextSelection: true,
+                                           usePdfPrinting: false,
+                                           localizedStrings: localizedStrings,
+                                           thumbsImageBase64Encoded: thumbsImageBase64Encoded,
+                                           toolbarButtonsBoxShadowStyle: \'\',
+                                           toolbarButtonsBoxShadowHoverStyle: \'\',
+                                           thumbnailsContainerBackgroundColor: \'\',
+                                           thumbnailsContainerBorderRightColor: \'\',
+                                           toolbarBorderBottomColor: \'\',
+                                           toolbarInputFieldBorderColor: \'\',
+                                            toolbarButtonBorderColor: \'\',
+                                            toolbarButtonBorderHoverColor: \'\',
+                                            thumbnailsContainerWidth: 0,
+                                            jqueryFileDownloadCookieName: \'jqueryFileDownloadJSForGD\',
+                                            showDownloadErrorsInPopup: true,
+                                            showImageWidth: false,
+                                            showHeader: true,
+                                            minimumImageWidth: 0,
+                                            enableStandardErrorHandling: true
+
+                                           });
         });
     </script>
     <body>
@@ -86,8 +124,8 @@ register_uninstall_hook( __FILE__, 'groupdocs_viewer_java_deactivate' );
 
 function groupdocs_viewer_java_deactivate()
 {
-	delete_option('gd_viewer_java');		
-
+	delete_option('gd_viewer_java');
+	delete_option('gd_folder_path');
 }
 function groupdocs_viewer_java_option_page() {
 	global $groupdocs_viewer_java_settings_page;

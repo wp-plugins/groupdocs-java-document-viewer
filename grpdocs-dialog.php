@@ -34,6 +34,12 @@ error_reporting(E_ALL | E_STRICT);
                     <span id="uri-note"></span></td>
             </tr>
             <tr>
+                <td align="right" class="gray dwl_gray"><strong>Folder path</strong><br/></td>
+                <td valign="top"><input name="folder_path" type="text" class="opt dwl" style="width:300px;" id="folder_path"
+                                        value = "<?php echo get_option('gd_folder_path'); ?>"/><br/>
+                    <span id="uri-note"></span></td>
+            </tr>
+            <tr>
                 <td align="right" class="gray dwl_gray"><strong>File path</strong><br/></td>
                 <td valign="top"><input name="file_path" type="text" class="opt dwl" style="width:300px;" id="file_path"/><br/>
                     <span id="uri-note"></span></td>

@@ -60,6 +60,9 @@ var GrpdocsInsertDialog = {
         jQuery('#file_path').blur(function () {
             update_sc();
         });
+        jQuery('#folder_path').blur(function () {
+            update_sc();
+        });
 
 
         function update_sc() {
@@ -81,6 +84,10 @@ var GrpdocsInsertDialog = {
             if (( jQuery('#file_path').val() != 0 ) & ( jQuery('#file_path').val() ) != null) {
                 shortcode = shortcode + '  file_path="' + jQuery('#file_path').val() + '"';
             }
+            if (( jQuery('#folder_path').val() != 0 ) & ( jQuery('#folder_path').val() ) != null) {
+                shortcode = shortcode + '  folder_path="' + jQuery('#folder_path').val() + '"';
+            }
+            console.log(jQuery('#folder_path').val());
             var newsc = shortcode.replace(/  /g, ' ');
 
             jQuery('#shortcode').val('[' + newsc + ']');
@@ -106,6 +113,10 @@ var GrpdocsInsertDialog = {
             if (( jQuery('#file_path').val() != 0 ) & ( jQuery('#file_path').val() ) != null) {
                 shortcode = shortcode + '  file_path="' + jQuery('#file_path').val() + '"';
             }
+            if (( jQuery('#folder_path').val() != 0 ) & ( jQuery('#folder_path').val() ) != null) {
+                shortcode = shortcode + '  folder_path="' + jQuery('#folder_path').val() + '"';
+            }
+            console.log(jQuery('#folder_path').val());
             var newsc = shortcode.replace(/  /g, ' ');
 
             jQuery('#shortcode').val('[' + newsc + ']');
