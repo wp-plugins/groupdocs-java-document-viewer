@@ -124,8 +124,8 @@ register_uninstall_hook( __FILE__, 'groupdocs_viewer_java_deactivate' );
 
 function groupdocs_viewer_java_deactivate()
 {
-	delete_option('gd_viewer_java');
-	delete_option('gd_folder_path');
+	delete_option('gd_viewer_java');		
+
 }
 function groupdocs_viewer_java_option_page() {
 	global $groupdocs_viewer_java_settings_page;

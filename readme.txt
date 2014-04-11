@@ -72,8 +72,8 @@ For detailed plugin installation instructions, please see <a href="https://githu
 
 == Screenshots ==
 
-1. Here's a screenshot of how to get your document link for insertion into the GroupDocs Viewer Embedder dialog
-2. Here's a screenshot of the GroupDocs Viewer Embedder in a Wordpress blog
+1. Here's a screenshot of how to add shortcode into new post to use the GroupDocs.Viewer for Java v.1.8.0 dialog
+2. Here's a screenshot of the GroupDocs.Viewer for Java v.1.8.0 in a Wordpress blog
 
 
 == Frequently Asked Questions ==
