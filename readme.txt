@@ -55,7 +55,7 @@ With this plugin you can seamlessly integrate <a href="http://groupdocs.com/java
 For detailed installation instructions, please <a href="https://github.com/groupdocs/wordpress-groupdocs-viewer-java-source/tree/master/groupdocs-viewer-java" rel="nofollow" target="_blank">see the plugin's documentation page</a>.
 
 <h4>Have Questions?</h4>
-Please feel free to <a href="http://groupdocs.com/corporate/contact" rel="nofollow" target="_blank">contact us</a>!
+Please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nofollow" target="_blank">contact us</a>!
 
 == Installation ==
 
@@ -84,7 +84,7 @@ This plugin is free only for registered users of the GroupDocs.Viewer for Java L
 Where can I get detailed help?
 For detailed installation and usage instructions, please see <a href="put link here" rel="nofollow" target="_blank">the plugins' documentation page</a>.
 
-If you still have questions, please feel free to <a href="http://groupdocs.com/corporate/contact" rel="nofollow" target="_blank">contact us</a>!
+If you still have questions, please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nofollow" target="_blank">contact us</a>!
 
 == Changelog ==
 = 1.0.1 =
