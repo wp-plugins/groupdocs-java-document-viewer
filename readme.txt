@@ -78,11 +78,8 @@ For detailed plugin installation instructions, please see <a href="https://githu
 
 == Frequently Asked Questions ==
 
-Is this a free plugin?
+<strong>Is this a free plugin?</strong><br>
 This plugin is free only for registered users of the GroupDocs.Viewer for Java Library. In order to use the plugin, you need to buy a license first. We offer a free evaluation version of the library, so that you can test it before committing. For more details on the GroupDocs.Viewer for Java Library, please <a href="http://groupdocs.com/java/document-viewer-library" target="_blank">see the product page</a>.
-
-Where can I get detailed help?
-For detailed installation and usage instructions, please see <a href="put link here" rel="nofollow" target="_blank">the plugins' documentation page</a>.
 
 If you still have questions, please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nofollow" target="_blank">contact us</a>!
 

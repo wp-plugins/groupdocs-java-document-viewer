@@ -40,7 +40,7 @@ error_reporting(E_ALL | E_STRICT);
                     <span id="uri-note"></span></td>
             </tr>
             <tr>
-                <td align="right" class="gray dwl_gray"><strong>File path</strong><br/></td>
+                <td align="right" class="gray dwl_gray"><strong>File name</strong><br/></td>
                 <td valign="top"><input name="file_path" type="text" class="opt dwl" style="width:300px;" id="file_path"/><br/>
                     <span id="uri-note"></span></td>
             </tr>
