@@ -52,8 +52,6 @@ With this plugin you can seamlessly integrate <a href="http://groupdocs.com/java
 
 <strong>Before you proceed:</strong> please be aware that this plugin can be used only by registered users of the GroupDocs.Viewer for Java Library. In order to use the plugin, you will need to buy a license. We do offer a free evaluation version so that you can test it before committing. More information on the library and pricing can be found <a href="http://groupdocs.com/java/document-viewer-library" target="_blank">here</a>.
 
-For detailed installation instructions, please <a href="https://github.com/groupdocs/wordpress-groupdocs-viewer-java-source/tree/master/groupdocs-viewer-java" rel="nofollow" target="_blank">see the plugin's documentation page</a>.
-
 <h4>Have Questions?</h4>
 Please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nofollow" target="_blank">contact us</a>!
 
@@ -61,7 +59,6 @@ Please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nof
 
 <strong>Please note:</strong> In order to use this plugin, you will need to buy a GroupDocs.Viewer for Java Library license. We offer a free evaluation version so that you can test it before committing. For more details on the library, please <a href="http://groupdocs.com/java/document-viewer-library" target="_blank">see the product page</a>.
 
-For detailed plugin installation instructions, please see <a href="https://github.com/groupdocs/wordpress-groupdocs-viewer-java-source/tree/master/groupdocs-viewer-java" target="_blank">this page</a>.
 
 1. Upload the entire `groupdocs-java-document-viewer` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` menu in WordPress.
