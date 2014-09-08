@@ -3,7 +3,7 @@ Contributors: GroupDocs Team
 Tags: groupdocs, groupdocs viewer, document viewer, html5 document viewer, java document viewer, java pdf viewer, java pdf viewer library, pdf viewer for java, pdf viewer in java, pdf, pdf viewer, word, excel, powerpoint, doc, docx, ppt, pptx, xls, xlsx
 Author URI: http://groupdocs.com
 Requires at least: 2.8
-Tested up to: 3.5.0
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 
 
@@ -81,6 +81,9 @@ This plugin is free only for registered users of the GroupDocs.Viewer for Java L
 If you still have questions, please feel free to <a href="http://groupdocs.com/corporate/contact-us" rel="nofollow" target="_blank">contact us</a>!
 
 == Changelog ==
+= 1.0.2 =
+* Minor bug fixes.(Support Wordpress version 3.9 - 4.0)
+
 = 1.0.1 =
 * Updated plugin to version 1.8.0 for GroupDocs.Viewer for Java
 * Added new field 'Folder Path'

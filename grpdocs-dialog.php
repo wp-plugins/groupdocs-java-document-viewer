@@ -6,7 +6,12 @@ if (floatval(phpversion()) < 5.3) {
 
 // access wp functions externally
 require_once('bootstrap.php');
-
+//the check on exist tiny_mce_popup.js file
+if (file_exists('../../../wp-includes/js/tinymce/tiny_mce_popup.js')){
+    $tiny = '<script type="text/javascript" src="../../../wp-includes/js/tinymce/tiny_mce_popup.js"></script>';
+}else{
+    $tiny = '<script type="text/javascript" src="js/tiny_mce_popup.js"></script>';
+}
 ini_set('display_errors', '0');
 error_reporting(E_ALL | E_STRICT);
 
@@ -17,7 +22,7 @@ error_reporting(E_ALL | E_STRICT);
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>GroupDocs Java Viewer Embedder</title>
         <script type="text/javascript" src="js/jquery-1.5.min.js"></script>
-        <script type="text/javascript" src="js/tiny_mce_popup.js"></script>
+        <?php echo $tiny ?>
         <script type="text/javascript" src="js/grpdocs-dialog.js"></script>    
 
         <link href="css/grpdocs-dialog.css" type="text/css" rel="stylesheet"/>

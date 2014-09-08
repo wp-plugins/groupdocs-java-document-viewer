@@ -6,7 +6,7 @@ Plugin URI: http://www.groupdocs.com/
 Description: With this plugin you can seamlessly integrate <a href="http://groupdocs.com/java/document-viewer-library" target="_blank">GroupDocs' Java document viewer functionality</a> into your WordPress website. This will allow you to embed and display PDF, Microsoft Office and over 45 other type of documents right on your WordPress website.
 Author: GroupDocs Team <support@groupdocs.com>
 Author URI: http://www.groupdocs.com/
-Version: 1.0.1
+Version: 1.0.2
 License: GPLv2
 */
 
